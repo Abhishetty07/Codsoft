@@ -1,0 +1,45 @@
+
+
+import java.util.*;
+public class Student{
+    public static void main(String args[]){
+         Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the total number of subjects:");
+               int n=sc.nextInt();
+                 int marks;
+                   int sum=0;
+                float average=0;
+            float totalmarks = 0;
+        for(int i=1;i<=n;i++){
+          
+        System.out.print("enter the subject" + i + " marks : " );
+        marks = sc.nextInt();
+                 if(marks>100){
+        System.out.println("oops!!enter the marks obtained for 100 marks");
+        System.out.println("enter the subject" + i + " marks : ");
+        marks = sc.nextInt();
+         }
+        sum=sum+marks;
+        totalmarks= n*100;
+        average= ((sum/totalmarks)*100);
+         }
+         System.out.println("the total marks obtained is : " + sum);
+         System.out.println("the average percentage is : " + average);
+         if(average<=100.000 && average>=90.000){
+            System.out.println("Grade:A");
+          }
+          else if(average<=89.000 && average>=70.000){
+            System.out.println("Grade:B");
+          }
+          else if(average<=69.999 && average>=50.000){
+            System.out.println("Grade:C");
+          }
+         else if(average<=49.999 && average>=30.000){
+            System.out.println("Grade:D");
+          }
+          else{
+            System.out.println("Fail");
+          }
+        }
+    }
+
